@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Huddle Landing Page</title>
+        <!-- font font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				font-size: 18px;
+				font-family: "Open Sans", sans-serif;
+				background: white;
+                color: hsl(192, 100%, 9%);
+			}
+			header {
+				background-image: url("images/bg-hero-desktop.svg");
+				background-color: hsl(193, 100%, 96%);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.headings {
+				font-family: "Poppins", sans-serif;
+				font-weight: 700;
+				color: hsl(192, 100%, 9%);
+			}
+			.logo-btn-div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px;
+			}
+			.logo-btn-div img {
+				width: 80px;
+			}
+			.head-btn {
+				background: white;
+				border-radius: 20px;
+				color: hsl(192, 100%, 9%);
+				width: 90px;
+				height: 30px;
+				box-shadow: 0px 0px 3px hsl(208, 11%, 55%);
+				border: none;
+			}
+            p {
+                font-weight: 200;
+            }
+            .head-btn:hover {
+                cursor: grab;
+            }
+			.mockup-div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0px 30px;
+			}
+			.mockup-div .mockup img {
+				width: 400px;
+			}
+			.mockup-div .text-btn {
+				max-width: 300px;
+				width: 100%;
+			}
+			.mockup-div .text-btn .get-started {
+				background-color: hsl(322, 100%, 66%);
+				color: white;
+				border: hsl(322, 100%, 66%);
+				border-radius: 30px;
+				padding: 9px 45px;
+                transition: background 1s;
+                transition-timing-function: ease-in-out;
+			}
+            .mockup-div .text-btn .get-started:hover {
+                background-color: #FF9BDB;
+                cursor: grab;
+            }
+			main {
+				padding: 60px 40px;
+			}
+			main .grow-sect {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: rgba(255, 255, 255, 0.082);
+				box-shadow: 0px 0px 4px 4px whitesmoke;
+				border-radius: 5px;
+				padding: 20px;
+				margin-bottom: 20px;
+			}
+			main .grow-sect div img {
+				width: 100%;
+				margin-right: 0px;
+				max-width: 350px;
+			}
+			.h3-p-right {
+				margin: auto auto;
+				width: 100%;
+				max-width: 450px;
+			}
+            .between {
+				box-shadow: 0px 0px 4px 0px whitesmoke;
+                background: white;
+                text-align: center;
+                margin: auto auto;
+                position: relative;
+                padding: 20px 10px;
+                border-radius: 5px;
+                bottom: 1px;
+                top: 25px;
+                width: 50%;
+            }
+            .between .get-started {
+                background-color: hsl(322, 100%, 66%);
+				color: white;
+				border: hsl(322, 100%, 66%);
+				border-radius: 30px;
+				padding: 6px 45px;
+                transition-property: background;
+                transition-duration: 1s;
+                transition-timing-function: linear;
+            }
+            .between .get-started:hover {
+                background-color: #FF9BDB;
+                cursor: grab;
+            }
+            footer {
+                background: hsl(192, 100%, 9%);
+                color: white;
+                padding: 100px 20px;
+            }
+            footer div .logo-png {
+                width: 150px;
+                background-color: aliceblue;
+            }
+            footer section {
+                display: grid;
+                grid-template-areas: 
+                'a b c d'
+                ;
+                gap: 10px;
+            }
+            footer section ul {
+                list-style: none;
+            }
+            footer section ul li a {
+                text-decoration: none;
+                color: white;
+            }
+            footer section ul li a:hover {
+                text-decoration: underline;
+                cursor: grab;
+            }
+            footer section .socials {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            footer section .socials li{
+                border: 1px solid white;
+                height: 30px;
+                width: 30px;
+                border-radius: 30px;
+                text-align: center;
+                cursor: grab;
+            }
+            footer section .socials li:hover {
+                border: 1px solid #FF9BDB;
+                color:#FF9BDB;
+            }
+            footer .copyright {
+                text-align: right;
+                place-items: right;
+                position: relative;
+                right: 0px;
+            }
+			@media screen and (max-width: 730px) {
+				header {
+					background-image: url("images/bg-hero-mobile.svg");
+				}
+				.mockup-div {
+					display: block;
+					text-align: center;
+					padding: 25px;
+				}
+				/* .mockup-div .mockup {
+                padding: 5px;
+            } */
+				.mockup-div .mockup img {
+					width: 100%;
+					margin: auto auto;
+				}
+				.mockup-div .text-btn {
+					width: 100%;
+					margin: auto auto;
+					text-align: center;
+				}
+				main .grow-sect {
+					/* display: block; */
+                    flex-direction: column;
+					text-align: center;
+                    border-radius: 10px;
+				}
+                main .grow-sect .grow-img-div {
+                    order: 1;
+                }
+                main .grow-sect .h3-p-right {
+                    order: 2;
+                }
+                .between {
+                    width: 90%;
+                    margin: auto auto;
+                }
+                footer div .logo-png {
+                    margin: 20px;
+                }
+                footer section {
+                    display: block;
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                footer section div div{
+                    margin: 20px;
+                }
+                footer section ul li {
+                    margin: 20px;
+                }
+                footer section .socials {
+                    margin-top: 20px;
+                }
+                footer .copyright {
+                    text-align: center;
+                    left: 0;
+                }
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo-btn-div">
+				<img src="images/logo.svg" alt="" />
+				<button class="head-btn">Try It Free</button>
+			</div>
+			<section class="mockup-div">
+				<div class="text-btn">
+					<h3 class="headings">
+						Build The Community Your Fans Will Love
+					</h3>
+					<br />
+					<p>
+						Huddle re-imagines the way we build communities. You
+						have a voice, but so does your audience. Create
+						connections with your users as you engage in genuine
+						discussion.
+					</p>
+					<br />
+					<button class="get-started">Get Started For Free</button>
+				</div>
+				<div class="mockup">
+					<br /><br />
+					<img src="images/illustration-mockups.svg" alt="" />
+				</div>
+			</section>
+		</header>
+		<main>
+			<section class="grow-sect">
+				<div class="h3-p-right">
+					<h3 class="headings">Grow Together</h3>
+					<p>
+						Generate meaningful discussions with your audience and
+						build strong, loyal community. Think of the insightful
+						conversations you miss out on with a feedback form.
+					</p><br>
+				</div>
+				<div class="grow-img-div">
+					<img src="images/illustration-grow-together.svg" alt="" />
+				</div>
+			</section>
+			<section class="grow-sect">
+				<div class="grow-img-div">
+					<img
+						src="images/illustration-flowing-conversation.svg"
+						alt=""
+					/> <br>
+				</div>
+				<div class="h3-p-right">
+                    <br>
+					<h3 class="headings">Flowing Conversations</h3>
+					<p>
+						You wouldn't paginate a conversation in real life, so
+						why do it online? Our threads have just-in-time loading
+						for a more natural flow.
+					</p>
+				</div>
+			</section>
+			<section class="grow-sect">
+                <div class="h3-p-right">
+					<h3 class="headings">Your Users</h3>
+					<p>
+						It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
+					</p><br>
+				</div>
+                <div class="grow-img-div">
+                    <img
+                        src="images/illustration-your-users.svg"
+                        alt=""
+                    />
+                </div>
+			</section>
+		</main>
+        <section class="between">
+            <h6 class="headings">Ready To build Your Community?</h6>
+            <button class="get-started">Get Started For Free</button>
+        </section>
+		<footer>
+            <div>
+                <img src="images/logo.svg" alt="" class="logo-png">
+            </div>
+            <section class="my-grid">
+                <div style="grid-area: a;">
+                    <div>
+                        <img src="images/icon-location.svg" alt="" style="margin: auto auto;">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti deleniti rem in beatae praesentium ducimus et possimus illum facere incidunt.</span>
+                    </div>
+                    <div>
+                        <img src="images/icon-phone.svg" alt="">
+                        <span>+1-543-123-4567</span>
+                    </div>
+                    <div>
+                        <img src="images/icon-email.svg" alt="">
+                        <span>example@huddle.com</span>
+                    </div>
+                </div>
+                <ul style="grid-area: b;">
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
+                <ul style="grid-area: c;">
+                    <li>
+                        <a href="#">Career</a>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+                <ul class="socials" style="grid-area: d;">
+                    <li>
+                    <span class="fa fa-facebook"></span>
+                    </li>
+                    <li>
+                    <span class="fa fa-twitter"></span>
+                    </li>
+                    <li>
+                    <span class="fa fa-instagram"></span>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <p>
+                        &copy; Copyright 2018 Huddle. All rights reserved.
+                    </p>
+                </div>
+            </section>
+
+        </footer>
+	</body>
+</html>
